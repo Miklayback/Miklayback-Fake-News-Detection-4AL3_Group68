@@ -59,6 +59,7 @@ sns.histplot(train["len"], bins=30, color="steelblue")
 plt.title("Distribution of Statement Lengths")
 plt.xlabel("Number of tokens")
 plt.ylabel("Count")
+plt.xlim(0, 100)       # 限制 X 轴范围
 plt.tight_layout()
 plt.savefig("len_dist.png")
 plt.close()
