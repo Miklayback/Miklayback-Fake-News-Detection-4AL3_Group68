@@ -113,7 +113,7 @@ def plot_confusion_matrix(cm, labels, out_path):
     plt.xlabel("Predicted label")
     plt.tight_layout()
     _ensure_dir(out_path)
-    plt.savefig(out_path, dpi=200, bbox_inches="tight")
+    plt.savefig(out_path, dpi=600, bbox_inches="tight")
     plt.close()
     print(f"Saved: {out_path}")
 
@@ -137,7 +137,7 @@ def plot_baseline_compare(maj_acc, maj_f1, test_acc, test_f1, out_path):
     plt.legend()
     plt.tight_layout()
     _ensure_dir(out_path)
-    plt.savefig(out_path, dpi=200, bbox_inches="tight")
+    plt.savefig(out_path, dpi=600, bbox_inches="tight")
     plt.close()
     print(f"Saved: {out_path}")
 

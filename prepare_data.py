@@ -8,7 +8,7 @@ import joblib
 
 os.chdir(os.path.dirname(__file__))
 print("Current working directory:", os.getcwd())
-ols = [
+cols = [
     "json_id", "label", "statement", "subject", "speaker", "speaker_job_title",
     "state_info", "party_affiliation", "barely_true_counts", "false_counts",
     "half_true_counts", "mostly_true_counts", "pants_on_fire_counts", "context"
@@ -50,7 +50,7 @@ plt.xlabel("Number of tokens")
 plt.ylabel("Count")
 plt.xlim(0, 100)       
 plt.tight_layout()
-plt.savefig("len_dist.png")
+plt.savefig("len_dist.png", dpi=600, bbox_inches="tight")
 plt.close()
 
 plt.figure(figsize=(6,4))
@@ -59,7 +59,7 @@ plt.title("Label Distribution in Training Set")
 plt.xlabel("Count")
 plt.ylabel("Label")
 plt.tight_layout()
-plt.savefig("label_dist.png")
+plt.savefig("label_dist.png", dpi=600, bbox_inches="tight")
 plt.close()
 
 
