@@ -15,7 +15,7 @@ ols = [
 ]
 train = pd.read_csv("train.tsv", sep="\t", header=None, names=cols)
 valid = pd.read_csv("valid.tsv", sep="\t", header=None, names=cols)
-test  = pd.read_csv("test.tsv",  sep="\t", header=None, names=cols)
+test = pd.read_csv("test.tsv",  sep="\t", header=None, names=cols)
 
 print("Train:", train.shape)
 print("Valid:", valid.shape)
@@ -63,10 +63,10 @@ plt.savefig("label_dist.png")
 plt.close()
 
 
-tfidf =TfidfVectorizer(max_features=20000, ngram_range=(1,2))
-X_train =tfidf.fit_transform(train["clean_statement"])
-X_valid =tfidf.transform(valid["clean_statement"])
-X_test  =tfidf.transform(test["clean_statement"])
+tfidf = TfidfVectorizer(max_features=20000, ngram_range=(1,2))
+X_train = tfidf.fit_transform(train["clean_statement"])
+X_valid = tfidf.transform(valid["clean_statement"])
+X_test  = tfidf.transform(test["clean_statement"])
 
 print("TF-IDF matrix shape:",X_train.shape)
 joblib.dump(tfidf,"tfidf_vectorizer.pkl")
